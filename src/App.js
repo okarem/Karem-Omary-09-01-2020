@@ -5,7 +5,6 @@ import { Route, Switch, BrowserRouter } from "react-router-dom";
 import LandingPage from "./pages/landing";
 import FavoritesPage from "./pages/favorites";
 import Navbar from "./comonents/navbar";
-
 function App() {
   return (
     <div className="App">
