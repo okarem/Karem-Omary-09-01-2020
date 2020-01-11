@@ -7,7 +7,7 @@ if (process.env.NODE_ENV === "development") {
   endpointUrl = `http://localhost:${port}`;
 }
 if (process.env.NODE_ENV === "production") {
-  endpointUrl = `http://dataservice.accuweather.com`;
+  endpointUrl = `https://dataservice.accuweather.com`;
 }
 
 export { endpointUrl, apikey };
