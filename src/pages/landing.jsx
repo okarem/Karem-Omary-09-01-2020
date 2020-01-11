@@ -3,19 +3,21 @@ import { endpointUrl, apikey } from "../config";
 
 const LandingPage = () => {
   let cityKey = "215854";
-  const [cityConditions, setCityConditions] = React.useState({});
+  
+  const [weeksForcast,setWeeksForcast] = React.useState([]);
+
 
   React.useEffect(() => {
-    fetch(`${endpointUrl}/currentconditions/v1/${cityKey}?apikey=${apikey}`)
+    fetch(`${endpointUrl}/forecasts/v1/daily/5day/${cityKey}?apikey=${apikey}`)
       .then(res => res.json())
-      .then(data => setCityConditions(data[0]))
+      .then(data => setWeeksForcast(data.DailyForecasts))
       .catch(err => console.log(err));
   }, []);
-  console.log(cityConditions);
+  
   return (
     <React.Fragment>
       <h1>LandingPage</h1>
-      <p>{JSON.stringify(cityConditions)}</p>
+      <p>{JSON.stringify(weeksForcast[0])}</p>
     </React.Fragment>
   );
 };
