@@ -1,0 +1,394 @@
+{
+  "_3431644": {
+    "Headline": {
+      "EffectiveDate": "2020-01-13T13:00:00+07:00",
+      "EffectiveEpochDate": 1578895200,
+      "Severity": 5,
+      "Text": "Expect showers Monday afternoon",
+      "Category": "rain",
+      "EndDate": "2020-01-13T19:00:00+07:00",
+      "EndEpochDate": 1578916800,
+      "MobileLink": "http://m.accuweather.com/en/id/telanaipura/3431644/extended-weather-forecast/3431644?lang=en-us",
+      "Link": "http://www.accuweather.com/en/id/telanaipura/3431644/daily-weather-forecast/3431644?lang=en-us"
+    },
+    "DailyForecasts": [
+      {
+        "Date": "2020-01-12T07:00:00+07:00",
+        "EpochDate": 1578787200,
+        "Temperature": {
+          "Minimum": { "Value": 75.0, "Unit": "F", "UnitType": 18 },
+          "Maximum": { "Value": 87.0, "Unit": "F", "UnitType": 18 }
+        },
+        "Day": {
+          "Icon": 12,
+          "IconPhrase": "Showers",
+          "HasPrecipitation": true,
+          "PrecipitationType": "Rain",
+          "PrecipitationIntensity": "Moderate"
+        },
+        "Night": {
+          "Icon": 15,
+          "IconPhrase": "Thunderstorms",
+          "HasPrecipitation": true,
+          "PrecipitationType": "Rain",
+          "PrecipitationIntensity": "Light"
+        },
+        "Sources": ["AccuWeather"],
+        "MobileLink": "http://m.accuweather.com/en/id/telanaipura/3431644/daily-weather-forecast/3431644?day=1&lang=en-us",
+        "Link": "http://www.accuweather.com/en/id/telanaipura/3431644/daily-weather-forecast/3431644?day=1&lang=en-us"
+      },
+      {
+        "Date": "2020-01-13T07:00:00+07:00",
+        "EpochDate": 1578873600,
+        "Temperature": {
+          "Minimum": { "Value": 76.0, "Unit": "F", "UnitType": 18 },
+          "Maximum": { "Value": 92.0, "Unit": "F", "UnitType": 18 }
+        },
+        "Day": {
+          "Icon": 12,
+          "IconPhrase": "Showers",
+          "HasPrecipitation": true,
+          "PrecipitationType": "Rain",
+          "PrecipitationIntensity": "Light"
+        },
+        "Night": {
+          "Icon": 15,
+          "IconPhrase": "Thunderstorms",
+          "HasPrecipitation": true,
+          "PrecipitationType": "Rain",
+          "PrecipitationIntensity": "Light"
+        },
+        "Sources": ["AccuWeather"],
+        "MobileLink": "http://m.accuweather.com/en/id/telanaipura/3431644/daily-weather-forecast/3431644?day=2&lang=en-us",
+        "Link": "http://www.accuweather.com/en/id/telanaipura/3431644/daily-weather-forecast/3431644?day=2&lang=en-us"
+      },
+      {
+        "Date": "2020-01-14T07:00:00+07:00",
+        "EpochDate": 1578960000,
+        "Temperature": {
+          "Minimum": { "Value": 76.0, "Unit": "F", "UnitType": 18 },
+          "Maximum": { "Value": 93.0, "Unit": "F", "UnitType": 18 }
+        },
+        "Day": {
+          "Icon": 4,
+          "IconPhrase": "Intermittent clouds",
+          "HasPrecipitation": false
+        },
+        "Night": {
+          "Icon": 38,
+          "IconPhrase": "Mostly cloudy",
+          "HasPrecipitation": true,
+          "PrecipitationType": "Rain",
+          "PrecipitationIntensity": "Light"
+        },
+        "Sources": ["AccuWeather"],
+        "MobileLink": "http://m.accuweather.com/en/id/telanaipura/3431644/daily-weather-forecast/3431644?day=3&lang=en-us",
+        "Link": "http://www.accuweather.com/en/id/telanaipura/3431644/daily-weather-forecast/3431644?day=3&lang=en-us"
+      },
+      {
+        "Date": "2020-01-15T07:00:00+07:00",
+        "EpochDate": 1579046400,
+        "Temperature": {
+          "Minimum": { "Value": 76.0, "Unit": "F", "UnitType": 18 },
+          "Maximum": { "Value": 90.0, "Unit": "F", "UnitType": 18 }
+        },
+        "Day": {
+          "Icon": 12,
+          "IconPhrase": "Showers",
+          "HasPrecipitation": true,
+          "PrecipitationType": "Rain",
+          "PrecipitationIntensity": "Light"
+        },
+        "Night": {
+          "Icon": 36,
+          "IconPhrase": "Intermittent clouds",
+          "HasPrecipitation": true,
+          "PrecipitationType": "Rain",
+          "PrecipitationIntensity": "Light"
+        },
+        "Sources": ["AccuWeather"],
+        "MobileLink": "http://m.accuweather.com/en/id/telanaipura/3431644/daily-weather-forecast/3431644?day=4&lang=en-us",
+        "Link": "http://www.accuweather.com/en/id/telanaipura/3431644/daily-weather-forecast/3431644?day=4&lang=en-us"
+      },
+      {
+        "Date": "2020-01-16T07:00:00+07:00",
+        "EpochDate": 1579132800,
+        "Temperature": {
+          "Minimum": { "Value": 76.0, "Unit": "F", "UnitType": 18 },
+          "Maximum": { "Value": 91.0, "Unit": "F", "UnitType": 18 }
+        },
+        "Day": {
+          "Icon": 7,
+          "IconPhrase": "Cloudy",
+          "HasPrecipitation": true,
+          "PrecipitationType": "Rain",
+          "PrecipitationIntensity": "Moderate"
+        },
+        "Night": {
+          "Icon": 38,
+          "IconPhrase": "Mostly cloudy",
+          "HasPrecipitation": false
+        },
+        "Sources": ["AccuWeather"],
+        "MobileLink": "http://m.accuweather.com/en/id/telanaipura/3431644/daily-weather-forecast/3431644?day=5&lang=en-us",
+        "Link": "http://www.accuweather.com/en/id/telanaipura/3431644/daily-weather-forecast/3431644?day=5&lang=en-us"
+      }
+    ]
+  },
+  "_300558": {
+    "Headline": {
+      "EffectiveDate": "2020-01-15T07:00:00+08:00",
+      "EffectiveEpochDate": 1579042800,
+      "Severity": 5,
+      "Text": "A thundershower Wednesday morning",
+      "Category": "thunderstorm",
+      "EndDate": "2020-01-15T13:00:00+08:00",
+      "EndEpochDate": 1579064400,
+      "MobileLink": "http://m.accuweather.com/en/sg/telok-blangah-new-town/300558/extended-weather-forecast/300558?lang=en-us",
+      "Link": "http://www.accuweather.com/en/sg/telok-blangah-new-town/300558/daily-weather-forecast/300558?lang=en-us"
+    },
+    "DailyForecasts": [
+      {
+        "Date": "2020-01-12T07:00:00+08:00",
+        "EpochDate": 1578783600,
+        "Temperature": {
+          "Minimum": { "Value": 77.0, "Unit": "F", "UnitType": 18 },
+          "Maximum": { "Value": 91.0, "Unit": "F", "UnitType": 18 }
+        },
+        "Day": {
+          "Icon": 12,
+          "IconPhrase": "Showers",
+          "HasPrecipitation": true,
+          "PrecipitationType": "Rain",
+          "PrecipitationIntensity": "Light"
+        },
+        "Night": {
+          "Icon": 39,
+          "IconPhrase": "Partly cloudy w/ showers",
+          "HasPrecipitation": true,
+          "PrecipitationType": "Rain",
+          "PrecipitationIntensity": "Light"
+        },
+        "Sources": ["AccuWeather"],
+        "MobileLink": "http://m.accuweather.com/en/sg/telok-blangah-new-town/300558/daily-weather-forecast/300558?lang=en-us",
+        "Link": "http://www.accuweather.com/en/sg/telok-blangah-new-town/300558/daily-weather-forecast/300558?lang=en-us"
+      },
+      {
+        "Date": "2020-01-13T07:00:00+08:00",
+        "EpochDate": 1578870000,
+        "Temperature": {
+          "Minimum": { "Value": 78.0, "Unit": "F", "UnitType": 18 },
+          "Maximum": { "Value": 91.0, "Unit": "F", "UnitType": 18 }
+        },
+        "Day": {
+          "Icon": 4,
+          "IconPhrase": "Intermittent clouds",
+          "HasPrecipitation": false
+        },
+        "Night": {
+          "Icon": 38,
+          "IconPhrase": "Mostly cloudy",
+          "HasPrecipitation": false
+        },
+        "Sources": ["AccuWeather"],
+        "MobileLink": "http://m.accuweather.com/en/sg/telok-blangah-new-town/300558/daily-weather-forecast/300558?day=1&lang=en-us",
+        "Link": "http://www.accuweather.com/en/sg/telok-blangah-new-town/300558/daily-weather-forecast/300558?day=1&lang=en-us"
+      },
+      {
+        "Date": "2020-01-14T07:00:00+08:00",
+        "EpochDate": 1578956400,
+        "Temperature": {
+          "Minimum": { "Value": 79.0, "Unit": "F", "UnitType": 18 },
+          "Maximum": { "Value": 89.0, "Unit": "F", "UnitType": 18 }
+        },
+        "Day": {
+          "Icon": 7,
+          "IconPhrase": "Cloudy",
+          "HasPrecipitation": true,
+          "PrecipitationType": "Rain",
+          "PrecipitationIntensity": "Light"
+        },
+        "Night": {
+          "Icon": 36,
+          "IconPhrase": "Intermittent clouds",
+          "HasPrecipitation": false
+        },
+        "Sources": ["AccuWeather"],
+        "MobileLink": "http://m.accuweather.com/en/sg/telok-blangah-new-town/300558/daily-weather-forecast/300558?day=2&lang=en-us",
+        "Link": "http://www.accuweather.com/en/sg/telok-blangah-new-town/300558/daily-weather-forecast/300558?day=2&lang=en-us"
+      },
+      {
+        "Date": "2020-01-15T07:00:00+08:00",
+        "EpochDate": 1579042800,
+        "Temperature": {
+          "Minimum": { "Value": 79.0, "Unit": "F", "UnitType": 18 },
+          "Maximum": { "Value": 89.0, "Unit": "F", "UnitType": 18 }
+        },
+        "Day": {
+          "Icon": 6,
+          "IconPhrase": "Mostly cloudy",
+          "HasPrecipitation": true,
+          "PrecipitationType": "Rain",
+          "PrecipitationIntensity": "Light"
+        },
+        "Night": {
+          "Icon": 36,
+          "IconPhrase": "Intermittent clouds",
+          "HasPrecipitation": true,
+          "PrecipitationType": "Rain",
+          "PrecipitationIntensity": "Light"
+        },
+        "Sources": ["AccuWeather"],
+        "MobileLink": "http://m.accuweather.com/en/sg/telok-blangah-new-town/300558/daily-weather-forecast/300558?day=3&lang=en-us",
+        "Link": "http://www.accuweather.com/en/sg/telok-blangah-new-town/300558/daily-weather-forecast/300558?day=3&lang=en-us"
+      },
+      {
+        "Date": "2020-01-16T07:00:00+08:00",
+        "EpochDate": 1579129200,
+        "Temperature": {
+          "Minimum": { "Value": 79.0, "Unit": "F", "UnitType": 18 },
+          "Maximum": { "Value": 90.0, "Unit": "F", "UnitType": 18 }
+        },
+        "Day": {
+          "Icon": 6,
+          "IconPhrase": "Mostly cloudy",
+          "HasPrecipitation": true,
+          "PrecipitationType": "Rain",
+          "PrecipitationIntensity": "Light"
+        },
+        "Night": {
+          "Icon": 35,
+          "IconPhrase": "Partly cloudy",
+          "HasPrecipitation": false
+        },
+        "Sources": ["AccuWeather"],
+        "MobileLink": "http://m.accuweather.com/en/sg/telok-blangah-new-town/300558/daily-weather-forecast/300558?day=4&lang=en-us",
+        "Link": "http://www.accuweather.com/en/sg/telok-blangah-new-town/300558/daily-weather-forecast/300558?day=4&lang=en-us"
+      }
+    ]
+  },
+  "_215854": {
+    "Headline": {
+      "EffectiveDate": "2020-01-13T01:00:00+02:00",
+      "EffectiveEpochDate": 1578870000,
+      "Severity": 5,
+      "Text": "Expect showers late Sunday night",
+      "Category": "rain",
+      "EndDate": "2020-01-13T07:00:00+02:00",
+      "EndEpochDate": 1578891600,
+      "MobileLink": "http://m.accuweather.com/en/il/tel-aviv/215854/extended-weather-forecast/215854?lang=en-us",
+      "Link": "http://www.accuweather.com/en/il/tel-aviv/215854/daily-weather-forecast/215854?lang=en-us"
+    },
+    "DailyForecasts": [
+      {
+        "Date": "2020-01-10T07:00:00+02:00",
+        "EpochDate": 1578632400,
+        "Temperature": {
+          "Minimum": { "Value": 49.0, "Unit": "F", "UnitType": 18 },
+          "Maximum": { "Value": 57.0, "Unit": "F", "UnitType": 18 }
+        },
+        "Day": {
+          "Icon": 14,
+          "IconPhrase": "Partly sunny w/ showers",
+          "HasPrecipitation": true,
+          "PrecipitationType": "Rain",
+          "PrecipitationIntensity": "Moderate"
+        },
+        "Night": {
+          "Icon": 34,
+          "IconPhrase": "Mostly clear",
+          "HasPrecipitation": false
+        },
+        "Sources": ["AccuWeather"],
+        "MobileLink": "http://m.accuweather.com/en/il/tel-aviv/215854/daily-weather-forecast/215854?day=1&lang=en-us",
+        "Link": "http://www.accuweather.com/en/il/tel-aviv/215854/daily-weather-forecast/215854?day=1&lang=en-us"
+      },
+      {
+        "Date": "2020-01-11T07:00:00+02:00",
+        "EpochDate": 1578718800,
+        "Temperature": {
+          "Minimum": { "Value": 50.0, "Unit": "F", "UnitType": 18 },
+          "Maximum": { "Value": 64.0, "Unit": "F", "UnitType": 18 }
+        },
+        "Day": {
+          "Icon": 3,
+          "IconPhrase": "Partly sunny",
+          "HasPrecipitation": false
+        },
+        "Night": {
+          "Icon": 35,
+          "IconPhrase": "Partly cloudy",
+          "HasPrecipitation": false
+        },
+        "Sources": ["AccuWeather"],
+        "MobileLink": "http://m.accuweather.com/en/il/tel-aviv/215854/daily-weather-forecast/215854?day=2&lang=en-us",
+        "Link": "http://www.accuweather.com/en/il/tel-aviv/215854/daily-weather-forecast/215854?day=2&lang=en-us"
+      },
+      {
+        "Date": "2020-01-12T07:00:00+02:00",
+        "EpochDate": 1578805200,
+        "Temperature": {
+          "Minimum": { "Value": 53.0, "Unit": "F", "UnitType": 18 },
+          "Maximum": { "Value": 63.0, "Unit": "F", "UnitType": 18 }
+        },
+        "Day": {
+          "Icon": 3,
+          "IconPhrase": "Partly sunny",
+          "HasPrecipitation": false
+        },
+        "Night": {
+          "Icon": 39,
+          "IconPhrase": "Partly cloudy w/ showers",
+          "HasPrecipitation": true,
+          "PrecipitationType": "Rain",
+          "PrecipitationIntensity": "Light"
+        },
+        "Sources": ["AccuWeather"],
+        "MobileLink": "http://m.accuweather.com/en/il/tel-aviv/215854/daily-weather-forecast/215854?day=3&lang=en-us",
+        "Link": "http://www.accuweather.com/en/il/tel-aviv/215854/daily-weather-forecast/215854?day=3&lang=en-us"
+      },
+      {
+        "Date": "2020-01-13T07:00:00+02:00",
+        "EpochDate": 1578891600,
+        "Temperature": {
+          "Minimum": { "Value": 49.0, "Unit": "F", "UnitType": 18 },
+          "Maximum": { "Value": 63.0, "Unit": "F", "UnitType": 18 }
+        },
+        "Day": {
+          "Icon": 4,
+          "IconPhrase": "Intermittent clouds",
+          "HasPrecipitation": false
+        },
+        "Night": {
+          "Icon": 34,
+          "IconPhrase": "Mostly clear",
+          "HasPrecipitation": false
+        },
+        "Sources": ["AccuWeather"],
+        "MobileLink": "http://m.accuweather.com/en/il/tel-aviv/215854/daily-weather-forecast/215854?day=4&lang=en-us",
+        "Link": "http://www.accuweather.com/en/il/tel-aviv/215854/daily-weather-forecast/215854?day=4&lang=en-us"
+      },
+      {
+        "Date": "2020-01-14T07:00:00+02:00",
+        "EpochDate": 1578978000,
+        "Temperature": {
+          "Minimum": { "Value": 49.0, "Unit": "F", "UnitType": 18 },
+          "Maximum": { "Value": 67.0, "Unit": "F", "UnitType": 18 }
+        },
+        "Day": {
+          "Icon": 3,
+          "IconPhrase": "Partly sunny",
+          "HasPrecipitation": false
+        },
+        "Night": {
+          "Icon": 34,
+          "IconPhrase": "Mostly clear",
+          "HasPrecipitation": false
+        },
+        "Sources": ["AccuWeather"],
+        "MobileLink": "http://m.accuweather.com/en/il/tel-aviv/215854/daily-weather-forecast/215854?day=5&lang=en-us",
+        "Link": "http://www.accuweather.com/en/il/tel-aviv/215854/daily-weather-forecast/215854?day=5&lang=en-us"
+      }
+    ]
+  }
+}
