@@ -7,9 +7,11 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import parse from "autosuggest-highlight/parse";
 import throttle from "lodash/throttle";
+import _ from "lodash"
 import topCities from "../general/topCities";
-const autocompleteService = { current: null };
+import { endpointUrl, apikey } from "../config";
 
+const autocompleteService = { current: null };
 const useStyles = makeStyles(theme => ({
   icon: {
     color: theme.palette.text.secondary,
@@ -29,17 +31,20 @@ const SearchBox = () => {
 
   const fetch =
     //    React.useMemo(
-    () =>
-      throttle((input, callback) => {
-        // autocompleteService.current.getPlacePredictions(input, callback);
-        
+    () => {
+      throttle(({ input }, callback) => {
+        fetch(
+          `http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${apikey}&q=${input}`,
+          callback
+        );
       }, 200);
+    };
   //   ,[]
   //   );
 
   React.useEffect(() => {
     let active = true;
-
+//can be removed
     if (!autocompleteService.current) {
       return undefined;
     }
@@ -51,7 +56,7 @@ const SearchBox = () => {
 
     fetch({ input: inputValue }, results => {
       if (active) {
-        setOptions(results || []);
+        setOptions(_.unionBy(results,options,'Key'));
       }
     });
 

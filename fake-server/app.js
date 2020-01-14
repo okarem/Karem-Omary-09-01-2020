@@ -14,7 +14,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-app.get(`/currentconditions/v1/215854`, (req, res) => {
+app.get(`/currentconditions/v1/:id`, (req, res) => {
   res.json(telavivRequest);
 });
 
