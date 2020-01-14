@@ -4,9 +4,7 @@ const port = 4000;
 const apikey = process.env.REACT_APP_APIKEY;
 
 if (process.env.NODE_ENV === "development") {
-  // endpointUrl = `http://localhost:${port}`;
-
-  endpointUrl = `http://192.168.1.104:${port}`;
+  endpointUrl = `http://localhost:${port}`;
 }
 if (process.env.NODE_ENV === "production") {
   endpointUrl = `https://dataservice.accuweather.com`;

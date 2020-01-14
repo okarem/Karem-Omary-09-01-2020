@@ -1,14 +1,42 @@
 .App {
   display: grid;
+  grid-template-areas: "city-on-display-info";
+  width: 100%;
 }
 .weather-icon-landing {
+  grid-area: weather-icon-landing;
   width: 200px;
   grid-column-end: span 1;
   grid-row-end: span 2;
 }
 .city-on-display-info {
+  grid-area: city-on-display-info;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 400px) {
+  .App {
+    width: 800px;
+    background-color: blue;
+  }
+  .city-on-display-info {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card-group {
+ display: grid;
+ grid-template-columns: 1fr;
+}
+.card {
+  text-align: center;
+  border-style: dashed;
+  width: 200px;
+}
+.star {
+  font-size: 25px;
+	color:gold;
 }
 /* 
 .App-logo {
@@ -47,13 +75,3 @@
   }
 }
 */
-
-.card-group {
-  width: 80%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.card {
-  width: 200px;
-}

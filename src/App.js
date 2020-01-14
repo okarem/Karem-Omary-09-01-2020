@@ -9,8 +9,8 @@ import { InfoProvider } from "./general/weatherContext";
 function App() {
   return (
     <div className="App">
-      <Navbar />
       <BrowserRouter>
+      <Navbar />
         <Switch>
           <InfoProvider>
             <Route exact path="/" component={LandingPage} />
