@@ -1,6 +1,3 @@
-import React from "react";
-import TextField from "@material-ui/core/TextField";
-import Autocomplete from "@material-ui/lab/Autocomplete";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
@@ -8,19 +5,26 @@ import { makeStyles } from "@material-ui/core/styles";
 import parse from "autosuggest-highlight/parse";
 import throttle from "lodash/throttle";
 
-function loadScript(src, position, id) {
-  if (!position) {
-    return;
-  }
+import _ from "lodash";
+import React from "react";
+import TextField from "@material-ui/core/TextField";
+import Autocomplete from "@material-ui/lab/Autocomplete";
+import topCities from "../general/topCities";
+import { endpointUrl, apikey } from "../config";
 
-  const script = document.createElement("script");
-  script.setAttribute("async", "");
-  script.setAttribute("id", id);
-  script.src = src;
-  position.appendChild(script);
-}
+// function loadScript(src, position, id) {
+//   if (!position) {
+//     return;
+//   }
 
-const autocompleteService = { current: null };
+//   const script = document.createElement("script");
+//   script.setAttribute("async", "");
+//   script.setAttribute("id", id);
+//   script.src = src;
+//   position.appendChild(script);
+// }
+
+// const autocompleteService = { current: null };
 
 const useStyles = makeStyles(theme => ({
   icon: {
@@ -29,23 +33,129 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-// export default function GoogleMaps() {
+// // export default function GoogleMaps() {
+// //   const classes = useStyles();
+// //   const [inputValue, setInputValue] = React.useState('');
+// //   const [options, setOptions] = React.useState([]);
+// //   const loaded = React.useRef(false);
+
+// //   if (typeof window !== 'undefined' && !loaded.current) {
+// //     if (!document.querySelector('#google-maps')) {
+// //       loadScript(
+// //         'https://maps.googleapis.com/maps/api/js?key=AIzaSyBwRp1e12ec1vOTtGiA4fcCt2sCUS78UYc&libraries=places',
+// //         document.querySelector('head'),
+// //         'google-maps',
+// //       );
+// //     }
+
+// //     loaded.current = true;
+// //   }
+
+// //   const handleChange = event => {
+// //     setInputValue(event.target.value);
+// //   };
+
+// //   const fetch = React.useMemo(
+// //     () =>
+// //       throttle((input, callback) => {
+// //         autocompleteService.current.getPlacePredictions(input, callback);
+// //       }, 200),
+// //     [],
+// //   );
+
+// //   React.useEffect(() => {
+// //     let active = true;
+
+// //     if (!autocompleteService.current && window.google) {
+// //       autocompleteService.current = new window.google.maps.places.AutocompleteService();
+// //     }
+// //     if (!autocompleteService.current) {
+// //       return undefined;
+// //     }
+
+// //     if (inputValue === '') {
+// //       setOptions([]);
+// //       return undefined;
+// //     }
+
+// //     fetch({ input: inputValue }, results => {
+// //       if (active) {
+// //         setOptions(results || []);
+// //       }
+// //     });
+
+// //     return () => {
+// //       active = false;
+// //     };
+// //   }, [inputValue, fetch]);
+
+// //   return (
+// //     <Autocomplete
+// //       id="google-map-demo"
+// //       style={{ width: 300 }}
+// //       getOptionLabel={option => (typeof option === 'string' ? option : option.description)}
+// //       filterOptions={x => x}
+// //       options={options}
+// //       autoComplete
+// //       includeInputInList
+// //       freeSolo
+// //       disableOpenOnFocus
+// //       renderInput={params => (
+// //         <TextField
+// //           {...params}
+// //           label="Add a location"
+// //           variant="outlined"
+// //           fullWidth
+// //           onChange={handleChange}
+// //         />
+// //       )}
+// //       renderOption={option => {
+// //         const matches = option.structured_formatting.main_text_matched_substrings;
+// //         const parts = parse(
+// //           option.structured_formatting.main_text,
+// //           matches.map(match => [match.offset, match.offset + match.length]),
+// //         );
+
+// //         return (
+// //           <Grid container alignItems="center">
+// //             <Grid item>
+// //               <LocationOnIcon className={classes.icon} />
+// //             </Grid>
+// //             <Grid item xs>
+// //               {parts.map((part, index) => (
+// //                 <span key={index} style={{ fontWeight: part.highlight ? 700 : 400 }}>
+// //                   {part.text}
+// //                 </span>
+// //               ))}
+
+// //               <Typography variant="body2" color="textSecondary">
+// //                 {option.structured_formatting.secondary_text}
+// //               </Typography>
+// //             </Grid>
+// //           </Grid>
+// //         );
+// //       }}
+// //     />
+// //   );
+// // }
+
+// const SearchBox = () => {
 //   const classes = useStyles();
-//   const [inputValue, setInputValue] = React.useState('');
-//   const [options, setOptions] = React.useState([]);
+//   const [inputValue, setInputValue] = React.useState("");
+//   const [options, setOptions] = React.useState(["hello","hi","bye"]);
 //   const loaded = React.useRef(false);
 
-//   if (typeof window !== 'undefined' && !loaded.current) {
-//     if (!document.querySelector('#google-maps')) {
-//       loadScript(
-//         'https://maps.googleapis.com/maps/api/js?key=AIzaSyBwRp1e12ec1vOTtGiA4fcCt2sCUS78UYc&libraries=places',
-//         document.querySelector('head'),
-//         'google-maps',
-//       );
-//     }
+//   // if (typeof window !== "undefined" && !loaded.current) {
+//   //   if (!document.querySelector("#google-maps")) {
+//   //     loadScript(
+//   //       "https://maps.googleapis.com/maps/api/js?key=AIzaSyBwRp1e12ec1vOTtGiA4fcCt2sCUS78UYc&libraries=places",
+//   //       document.querySelector("head"),
+//   //       "google-maps"
+//   //     );
+//   //   }
 
-//     loaded.current = true;
-//   }
+//   //   loaded.current = true;
+//   // }
 
 //   const handleChange = event => {
 //     setInputValue(event.target.value);
@@ -56,7 +166,7 @@ const useStyles = makeStyles(theme => ({
 //       throttle((input, callback) => {
 //         autocompleteService.current.getPlacePredictions(input, callback);
 //       }, 200),
-//     [],
+//     []
 //   );
 
 //   React.useEffect(() => {
@@ -69,7 +179,7 @@ const useStyles = makeStyles(theme => ({
 //       return undefined;
 //     }
 
-//     if (inputValue === '') {
+//     if (inputValue === "") {
 //       setOptions([]);
 //       return undefined;
 //     }
@@ -89,7 +199,9 @@ const useStyles = makeStyles(theme => ({
 //     <Autocomplete
 //       id="google-map-demo"
 //       style={{ width: 300 }}
-//       getOptionLabel={option => (typeof option === 'string' ? option : option.description)}
+//       getOptionLabel={option =>
+//         typeof option === "string" ? option : option.description
+//       }
 //       filterOptions={x => x}
 //       options={options}
 //       autoComplete
@@ -106,10 +218,11 @@ const useStyles = makeStyles(theme => ({
 //         />
 //       )}
 //       renderOption={option => {
-//         const matches = option.structured_formatting.main_text_matched_substrings;
+//         const matches =
+//           option.structured_formatting.main_text_matched_substrings;
 //         const parts = parse(
 //           option.structured_formatting.main_text,
-//           matches.map(match => [match.offset, match.offset + match.length]),
+//           matches.map(match => [match.offset, match.offset + match.length])
 //         );
 
 //         return (
@@ -119,7 +232,10 @@ const useStyles = makeStyles(theme => ({
 //             </Grid>
 //             <Grid item xs>
 //               {parts.map((part, index) => (
-//                 <span key={index} style={{ fontWeight: part.highlight ? 700 : 400 }}>
+//                 <span
+//                   key={index}
+//                   style={{ fontWeight: part.highlight ? 700 : 400 }}
+//                 >
 //                   {part.text}
 //                 </span>
 //               ))}
@@ -133,111 +249,72 @@ const useStyles = makeStyles(theme => ({
 //       }}
 //     />
 //   );
-// }
+// };
 
-const SearchBox = () => {
+export default function ComboBox(props) {
   const classes = useStyles();
+  //here topCities can be replaced with [], topCities is used for a snappier response
+  const [options, setOptions] = React.useState(topCities);
   const [inputValue, setInputValue] = React.useState("");
-  const [options, setOptions] = React.useState(["hello","hi","bye"]);
-  const loaded = React.useRef(false);
-
-  // if (typeof window !== "undefined" && !loaded.current) {
-  //   if (!document.querySelector("#google-maps")) {
-  //     loadScript(
-  //       "https://maps.googleapis.com/maps/api/js?key=AIzaSyBwRp1e12ec1vOTtGiA4fcCt2sCUS78UYc&libraries=places",
-  //       document.querySelector("head"),
-  //       "google-maps"
-  //     );
-  //   }
-
-  //   loaded.current = true;
-  // }
-
-  const handleChange = event => {
-    setInputValue(event.target.value);
-  };
-
-  const fetch = React.useMemo(
-    () =>
-      throttle((input, callback) => {
-        autocompleteService.current.getPlacePredictions(input, callback);
-      }, 200),
-    []
-  );
 
   React.useEffect(() => {
     let active = true;
-
-    if (!autocompleteService.current && window.google) {
-      autocompleteService.current = new window.google.maps.places.AutocompleteService();
-    }
-    if (!autocompleteService.current) {
-      return undefined;
-    }
-
     if (inputValue === "") {
-      setOptions([]);
       return undefined;
     }
 
-    fetch({ input: inputValue }, results => {
-      if (active) {
-        setOptions(results || []);
-      }
-    });
+    fetch(
+      `${endpointUrl}/locations/v1/cities/autocomplete?apikey=${apikey}&q=${inputValue}`
+    )
+      .then(res => res.json())
+      .then(predictionDataArray => {
+        if (active) {
+          console.log("results are here");
+          setOptions(_.unionBy(predictionDataArray, options, "Key"));
+        }
+      })
+      .catch(err => console.log(err));
 
     return () => {
       active = false;
     };
-  }, [inputValue, fetch]);
+  }, [inputValue]);
 
+  const handleTextFieldChange = event => {
+    setInputValue(event.target.value);
+  };
   return (
     <Autocomplete
-      id="google-map-demo"
-      style={{ width: 300 }}
-      getOptionLabel={option =>
-        typeof option === "string" ? option : option.description
-      }
-      filterOptions={x => x}
+      id="combo-box-demo"
       options={options}
-      autoComplete
-      includeInputInList
-      freeSolo
-      disableOpenOnFocus
+      getOptionLabel={option => option.LocalizedName}
+      style={{ width: 300 }}
       renderInput={params => (
         <TextField
           {...params}
-          label="Add a location"
+          label="Search for location"
           variant="outlined"
+          onChange={handleTextFieldChange}
           fullWidth
-          onChange={handleChange}
         />
       )}
       renderOption={option => {
-        const matches =
-          option.structured_formatting.main_text_matched_substrings;
-        const parts = parse(
-          option.structured_formatting.main_text,
-          matches.map(match => [match.offset, match.offset + match.length])
-        );
-
         return (
-          <Grid container alignItems="center">
+          <Grid
+            onClick={() => {
+              // console.log(option)
+              props.setCityOnDisplay(option);
+            }}
+            container
+            alignItems="center"
+          >
             <Grid item>
               <LocationOnIcon className={classes.icon} />
             </Grid>
             <Grid item xs>
-              {parts.map((part, index) => (
-                <span
-                  key={index}
-                  style={{ fontWeight: part.highlight ? 700 : 400 }}
-                >
-                  {part.text}
-                </span>
-              ))}
-
+              <span style={{ fontWeight: 700 }}>{option.LocalizedName}</span>
               <Typography variant="body2" color="textSecondary">
-                {option.structured_formatting.secondary_text}
+                {option.Country.LocalizedName}
               </Typography>
             </Grid>
           </Grid>
@@ -245,6 +322,4 @@ const SearchBox = () => {
       }}
     />
   );
-};
-
-export default SearchBox;
+}

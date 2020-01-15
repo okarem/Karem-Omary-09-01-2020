@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { endpointUrl, apikey } from "../config";
 import { InfoContext } from "../general/weatherContext";
-import SearchBox from "../comonents/searchBox2";
+import SearchBox from "../comonents/searchBox";
 import topCities from "../general/topCities";
 import Card from "../comonents/card";
 import icons from "../weather-forecast-icons/png/pngs";
@@ -22,6 +22,7 @@ const LandingPage = () => {
   const [cityOnDisplay, setCityOnDisplay] = React.useState(
     info.defaultCityInfo
   );
+  let errMsg = null;
   const [weeksForcast, setWeeksForcast] = React.useState([]);
   const [currentForcast, setCurrentForcast] = React.useState({});
   const [isFavorite, setIsFavorite] = React.useState(
@@ -46,17 +47,37 @@ const LandingPage = () => {
           }
         )
       )
+      .catch(err => {
+        errMsg = "City unavailable";
+        console.log(err);
+      });
 
-      .catch(err => console.log(err));
-  }, []);
+    setIsFavorite(
+      info.favoriteCities.findIndex(city => city.Key === cityOnDisplay.Key) !==
+        -1
+    );
+  }, [cityOnDisplay]);
 
   console.log(currentForcast);
   if (
     weeksForcast === [] ||
     currentForcast === {} ||
     !currentForcast.Temperature
-  )
+  ){
+    if (errMsg) {
+      return (
+        <React.Fragment>
+          <div className="container">
+            <div className="search-box-area">
+              <SearchBox setCityOnDisplay={setCityOnDisplay} />
+            </div>
+            <h3>{errMsg}</h3>
+          </div>
+        </React.Fragment>
+      );
+    }
     return <div>Loading...</div>;
+  }
 
   const toggleInFavorites = () => {
     if (
@@ -74,11 +95,13 @@ const LandingPage = () => {
     setIsFavorite(!isFavorite);
   };
 
+  
+
   return (
     <React.Fragment>
       <div className="container">
         <div className="search-box-area">
-          <SearchBox />
+          <SearchBox setCityOnDisplay={setCityOnDisplay} />
         </div>
         <Button onClick={toggleInFavorites}>
           {isFavorite ? "Unfavorite" : "Favorite"}
