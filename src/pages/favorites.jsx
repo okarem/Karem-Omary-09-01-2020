@@ -43,7 +43,7 @@ const FavoritesPage = () => {
               <Card
                 Title={info.favoriteCities[index].LocalizedName}
                 Subtitle={
-                  cityData.Temperature.Metric.Value +
+                  Math.floor(cityData.Temperature.Metric.Value) +
                   " " +
                   cityData.Temperature.Metric.Unit
                 }

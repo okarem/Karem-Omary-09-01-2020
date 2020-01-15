@@ -2,19 +2,9 @@ import React, { useContext } from "react";
 import { endpointUrl, apikey } from "../config";
 import { InfoContext } from "../general/weatherContext";
 import SearchBox from "../comonents/searchBox";
-import topCities from "../general/topCities";
-import Card from "../comonents/card";
-import icons from "../weather-forecast-icons/png/pngs";
 import { Button } from "@material-ui/core";
-const weekDays = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday"
-];
+import FiveDayPrediction from "../comonents/fiveDayPrediction";
+import CityOnDisplayCard from "../comonents/cityOnDisplayCard";
 
 const LandingPage = () => {
   const { info, setInfo } = useContext(InfoContext);
@@ -30,7 +20,7 @@ const LandingPage = () => {
   );
   const fetch5DayForcast = () =>
     fetch(
-      `${endpointUrl}/forecasts/v1/daily/5day/${cityOnDisplay.Key}?apikey=${apikey}`
+      `${endpointUrl}/forecasts/v1/daily/5day/${cityOnDisplay.Key}?apikey=${apikey}&metric=${info.isMetric}`
     );
   const fetchCurrentForcast = () =>
     fetch(
@@ -63,7 +53,7 @@ const LandingPage = () => {
     weeksForcast === [] ||
     currentForcast === {} ||
     !currentForcast.Temperature
-  ){
+  ) {
     if (errMsg) {
       return (
         <React.Fragment>
@@ -95,8 +85,6 @@ const LandingPage = () => {
     setIsFavorite(!isFavorite);
   };
 
-  
-
   return (
     <React.Fragment>
       <div className="container">
@@ -106,35 +94,8 @@ const LandingPage = () => {
         <Button onClick={toggleInFavorites}>
           {isFavorite ? "Unfavorite" : "Favorite"}
         </Button>
-
-        <div className="city-on-display-info">
-          <img className="weather-icon-landing" src={icons.cloudy} />
-          <h3>
-            {cityOnDisplay.LocalizedName},{cityOnDisplay.Country.LocalizedName}
-          </h3>
-          <h1>
-            {currentForcast.Temperature.Metric.Value}{" "}
-            {currentForcast.Temperature.Metric.Unit}
-          </h1>
-        </div>
-        <h2>{currentForcast.WeatherText}</h2>
-        <div className="card-group">
-          {weeksForcast.map(day => {
-            const date = new Date(day.Date);
-            return (
-              <Card
-                Title={weekDays[date.getDay()]}
-                Subtitle={
-                  day.Temperature.Minimum.Value +
-                  "-" +
-                  day.Temperature.Maximum.Value +
-                  " " +
-                  day.Temperature.Maximum.Unit
-                }
-              />
-            );
-          })}
-        </div>
+        <CityOnDisplayCard isMetric={info.isMetric} cityOnDisplay={cityOnDisplay} currentForcast={currentForcast} />
+        <FiveDayPrediction isMetric={info.isMetric} weeksForcast={weeksForcast} />
       </div>
     </React.Fragment>
   );
