@@ -1,3 +1,9 @@
+## Hosted app is [Here](https://karem-omary-09-01-2020.netlify.com)
+[https://karem-omary-09-01-2020.netlify.com](https://karem-omary-09-01-2020.netlify.com)
+
+## Credits
+Weather icons by [Linector](https://www.flaticon.com/authors/linector) at [Flaticon.com](https://www.flaticon.com/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -67,5 +73,8 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
-##Credits
+## Hosted app is [Here](https://karem-omary-09-01-2020.netlify.com)
+[https://karem-omary-09-01-2020.netlify.com](https://karem-omary-09-01-2020.netlify.com)
+
+## Credits
 Weather icons by [Linector](https://www.flaticon.com/authors/linector) at [Flaticon.com](https://www.flaticon.com/)

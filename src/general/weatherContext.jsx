@@ -24,35 +24,39 @@ const initialState = {
       LocalizedName: "Tel Aviv"
     }
   },
-  favoriteCities: [{
-    "Version": 1,
-    "Key": "215854",
-    "Type": "City",
-    "Rank": 31,
-    "LocalizedName": "Tel Aviv",
-    "Country": {
-      "ID": "IL",
-      "LocalizedName": "Israel"
+  isMetric: true,
+  favoriteCities: [
+    {
+      Version: 1,
+      Key: "215854",
+      Type: "City",
+      Rank: 31,
+      LocalizedName: "Tel Aviv",
+      Country: {
+        ID: "IL",
+        LocalizedName: "Israel"
+      },
+      AdministrativeArea: {
+        ID: "TA",
+        LocalizedName: "Tel Aviv"
+      }
     },
-    "AdministrativeArea": {
-      "ID": "TA",
-      "LocalizedName": "Tel Aviv"
+    {
+      Version: 1,
+      Key: "3431644",
+      Type: "City",
+      Rank: 45,
+      LocalizedName: "Telanaipura",
+      Country: {
+        ID: "ID",
+        LocalizedName: "Indonesia"
+      },
+      AdministrativeArea: {
+        ID: "JA",
+        LocalizedName: "Jambi"
+      }
     }
-  },{
-    "Version": 1,
-    "Key": "3431644",
-    "Type": "City",
-    "Rank": 45,
-    "LocalizedName": "Telanaipura",
-    "Country": {
-      "ID": "ID",
-      "LocalizedName": "Indonesia"
-    },
-    "AdministrativeArea": {
-      "ID": "JA",
-      "LocalizedName": "Jambi"
-    }
-  }]
+  ]
 };
 
 const InfoContext = React.createContext();
