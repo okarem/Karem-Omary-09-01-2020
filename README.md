@@ -20,7 +20,7 @@ Weather icons by [Linector](https://www.flaticon.com/authors/linector) at [Flati
 ## for deployment:
 - get an API key from accuweather
 - add it as an enviroment variable "REACT_APP_APIKEY"
-- emample: "REACT_APP_APIKEY = qH9VxSiDgm-Not_My_API_Key-ZLiAj2b7Fo7G"
+- example: "REACT_APP_APIKEY = qH9VxSiDgm-Not_My_API_Key-ZLiAj2b7Fo7G"
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
