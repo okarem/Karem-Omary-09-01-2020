@@ -285,6 +285,7 @@ export default function ComboBox(props) {
   };
   return (
     <Autocomplete
+      className={classes.bar}
       id="combo-box-demo"
       options={options}
       getOptionLabel={option => option.LocalizedName}

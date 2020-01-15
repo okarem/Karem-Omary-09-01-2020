@@ -3,6 +3,8 @@ import { endpointUrl, apikey } from "../config";
 import { InfoContext } from "../general/weatherContext";
 import Card from "../comonents/card";
 import { useHistory } from "react-router-dom";
+import WeatherCards from "../comonents/betterCard";
+
 const FavoritesPage = () => {
   const history = useHistory();
   const { info, setInfo } = useContext(InfoContext);
@@ -30,27 +32,10 @@ const FavoritesPage = () => {
     <React.Fragment>
       <div className="container">
         <h1>FavoritesPage</h1>
+        <div className="favorite-cities-collection">
 
-        {(Array.isArray(citiesData) &&
-          citiesData.length &&
-          citiesData.map((cityData, index) => (
-            <span
-              onClick={() => {
-                setInfo({ defaultCityInfo: info.favoriteCities[index] });
-                history.push("/");
-              }}
-            >
-              <Card
-                Title={info.favoriteCities[index].LocalizedName}
-                Subtitle={
-                  Math.floor(cityData.Temperature.Metric.Value) +
-                  " " +
-                  cityData.Temperature.Metric.Unit
-                }
-                Subtitle2={cityData.WeatherText}
-              />
-            </span>
-          ))) || <h3>You have no favorite!</h3>}
+        <WeatherCards citiesData={citiesData} />
+        </div>
       </div>
     </React.Fragment>
   );
