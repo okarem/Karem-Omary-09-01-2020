@@ -38,7 +38,9 @@ export default function ComboBox(props) {
           setOptions(_.unionBy(predictionDataArray, options, "Key"));
         }
       })
-      .catch(err => console.log(err));
+      .catch(err => {
+        //failed to fetch cities, but code will still work
+        console.log(err)});
 
     return () => {
       active = false;

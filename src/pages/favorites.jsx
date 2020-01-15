@@ -7,7 +7,6 @@ import WeatherCards from "../comonents/favoriteCityCard";
 const FavoritesPage = () => {
   const history = useHistory();
   const { info, setInfo } = useContext(InfoContext);
-
   const [citiesData, setCitiesData] = React.useState([]);
 
   const fetchDataForCity = cityKey =>
@@ -16,17 +15,21 @@ const FavoritesPage = () => {
   React.useEffect(() => {
     if (info) {
       Promise.all(info.favoriteCities.map(city => fetchDataForCity(city.Key)))
-        .then(responses =>
-          Promise.all(responses.map(cityDataRes => cityDataRes.json()))
+        .then(responses =>{
+          if(!responses.every(response=>response.status&&response.status===200))
+          throw new Error("one or more city info fetch failed")
+          return Promise.all(responses.map(cityDataRes => cityDataRes.json()))
+        }
         )
         .then(citiesData =>
           setCitiesData(citiesData.map(currentDayData => currentDayData[0]))
         )
-        .catch(err => console.log(err));
+        .catch(err => {console.log(err)
+        return <h3>Network error, please reload, or go to home page</h3>
+        });
     }
   }, []);
 
-  console.log(citiesData);
   return (
     <React.Fragment>
       <div className="container">

@@ -37,7 +37,7 @@ export default function WeatherCard({ citiesData, ...props }) {
       {(Array.isArray(citiesData) &&
         citiesData.length &&
         citiesData.map((cityData, index) => (
-          <div className="city-card">
+          <div key={index} className="city-card">
             <Card
               {...props}
               className={classes.card}
