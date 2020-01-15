@@ -3,7 +3,6 @@ import Card from "@material-ui/core/Card";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 
-
 const weekDays = [
   "Sunday",
   "Monday",
@@ -14,13 +13,12 @@ const weekDays = [
   "Saturday"
 ];
 const useStyles = makeStyles({
- root:{
-textAlign:"center"
- }
+  root: {
+    textAlign: "center"
+  }
 });
 
 export default function({ weeksForcast }) {
-
   const classes = useStyles();
 
   return (
@@ -28,18 +26,20 @@ export default function({ weeksForcast }) {
       {weeksForcast.map((day, index) => {
         const date = new Date(day.Date);
         return (
-          <Card className={classes.root} key={index}>
-            <Typography variant="subtitle1">
-              {weekDays[date.getDay()]}
-            </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              {Math.floor(day.Temperature.Minimum.Value) +
-                "/" +
-                Math.floor(day.Temperature.Maximum.Value) +
-                " " +
-                day.Temperature.Maximum.Unit}
-            </Typography>
-          </Card>
+          <div className="card">
+            <Card className={classes.root} key={index}>
+              <Typography variant="subtitle1">
+                {weekDays[date.getDay()]}
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+                {Math.floor(day.Temperature.Minimum.Value) +
+                  "/" +
+                  Math.floor(day.Temperature.Maximum.Value) +
+                  " " +
+                  day.Temperature.Maximum.Unit}
+              </Typography>
+            </Card>
+          </div>
         );
       })}
     </div>
