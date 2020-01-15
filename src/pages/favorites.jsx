@@ -1,9 +1,8 @@
 import React, { useContext } from "react";
 import { endpointUrl, apikey } from "../config";
 import { InfoContext } from "../general/weatherContext";
-import Card from "../comonents/card";
 import { useHistory } from "react-router-dom";
-import WeatherCards from "../comonents/betterCard";
+import WeatherCards from "../comonents/favoriteCityCard";
 
 const FavoritesPage = () => {
   const history = useHistory();
