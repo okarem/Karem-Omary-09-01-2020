@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "../comonents/card";
-
+import BetterCard from "../comonents/betterCard"
 
 const weekDays = [
     "Sunday",
