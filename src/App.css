@@ -1,7 +1,7 @@
 .App {
   display: grid;
   grid-template-areas: "city-on-display-info";
-  width: 100%;
+height: 100%;
 }
 .container {
   flex-direction: column;
@@ -17,52 +17,30 @@
 }
 .city-on-display-info {
   grid-area: city-on-display-info;
-  /* margin-bottom: 2rem; */
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 1rem;
   justify-content: space-between;
-  /* display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-areas:
-    "city-on-display-info_city-name"
-    "city-on-display-info_weather-image"
-    "city-on-display-info_temperature;"
-    "city-on-display-info_weather-text"; */
 }
 .city-on-display-info_city-name {
-  /* grid-area: city-on-display-info_city-name; */
   margin: 0.1rem;
   height: auto;
 }
 .city-on-display-info_weather-image {
-  /* grid-area: city-on-display-info_weather-image; */
   margin: 0.1rem;
   height: auto;
 }
 .city-on-display-info_temperature {
-  /* grid-area: city-on-display-info_temperature; */
   font-size: 2rem;
   margin: 0.1rem;
   height: auto;
 }
 .city-on-display-info_weather-text {
   margin: 0.1rem;
-  /* grid-area: city-on-display-info_weather-text; */
   height: auto;
 }
 
-@media (min-width: 400px) {
-  .App {
-    width: 800px;
-    background-color: blue;
-  }
-  .city-on-display-info {
-    grid-template-columns: 1fr 1fr;
-  }
-}
 
 .card-group {
   display: grid;
@@ -87,40 +65,14 @@
 .city-card{
   margin: 1rem;
 }
-/* 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (min-width: 400px) {
+  .App {
+    width: 800px;
   }
-} */
-
-/*
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  
+.card-group{
+  position: static;
+  bottom: 10%;
 }
-
-.App-link {
-  color: #61dafb;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-*/

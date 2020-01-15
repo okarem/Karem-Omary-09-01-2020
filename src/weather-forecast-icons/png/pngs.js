@@ -11,48 +11,6 @@ import thirtythreeto38 from "./33to38.png";
 import thirtynineto43 from "./39to43.png";
 import fourtyfour from "./44.png";
 
-// const weatherIconByCode = code => {
-//   if (!code) return oneto3;
-//   switch (code) {
-//     case code <= 3:
-//       return oneto3;
-//       break;
-//     case code >= 4 && code <= 6:
-//       return fourto6;
-//       break;
-//     case code >= 7 && code <= 11:
-//       return sevento11;
-//       break;
-//     case code >= 12 && code <= 18:
-//       return twelveto18;
-//       break;
-//     case code >= 19 && code <= 23:
-//       return ninteento23;
-//       break;
-//     case code >= 24 && code <= 29:
-//       return twentyfourto29;
-//       break;
-//     case code >= 33 && code <= 38:
-//       return thirtythreeto38;
-//       break;
-//     case code >= 39 && code <= 43:
-//       return thirtynineto43;
-//       break;
-//     case code === 30:
-//       return thirty;
-//       break;
-//     case code === 31:
-//       return thirtyone;
-//       break;
-//     case code === 32:
-//       return thirtytwo;
-//       break;
-//     case code === 44:
-//       return fourtyfour;
-//       break;
-//   }
-// };
-
 const obj = {
     "1":oneto3,
     "2":oneto3,
